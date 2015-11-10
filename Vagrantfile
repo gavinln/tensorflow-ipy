@@ -78,6 +78,8 @@ Vagrant.configure(2) do |config|
   # SHELL
   config.vm.provision "shell", path: 'puppet/install_puppet_modules.sh'
 
+  config.vm.hostname = "tensorflow-ipy"
+
   config.vm.provision "puppet" do |puppet|
     puppet.manifest_file  = "default.pp"
     puppet.manifests_path = "puppet/manifests"
