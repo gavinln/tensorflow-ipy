@@ -42,7 +42,7 @@ work on Windows, Mac and Linux operating systems.
 
 ## 2. Run your first TensorFlow command line program
 
-First run 1. Start the VM
+First run section 1.
 
 1. Change to the python directory
 
