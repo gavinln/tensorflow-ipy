@@ -34,10 +34,21 @@ class python_setup {
                 provider => pip,
                 require => Package['python-pip']
             }
+            package { 'jsonschema':
+                ensure => installed,
+                provider => pip,
+                require => Package['python-pip']
+            }
+            package { 'terminado':
+                ensure => installed,
+                provider => pip,
+                require => Package['python-pip']
+            }
             package { 'ipython':
                 ensure => '3.2.1',
                 provider => pip,
-                require => Package['python-zmq', 'jinja2', 'tornado']
+                require => Package['python-zmq', 'jinja2', 'tornado',
+                    'jsonschema', 'terminado']
             }
             # pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
         }
