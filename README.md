@@ -56,6 +56,24 @@ First run section 1.
     python first-tensorflow.py
     ```
 
+## 3. Start the IPython (Jupyter) notebooks
+
+First run section 1.
+
+1. Change to the notebooks directory
+
+    ```
+    cd /vagrant/notebooks
+    ```
+
+2. Run the IPython notebook server
+
+    ```
+    ./ipython-run.sh
+    ```
+
+3. Open your browser to http://192.168.33.10:8888/ to view the notebooks
+
 ## Requirements
 
 The following software is needed to get the software from github and run
