@@ -1,5 +1,4 @@
 # tensorflow-ipy
-VM with the TensorFlow library from Google
 
 * Source code - [Github][1]
 * Author - Gavin Noronha - <gnoronha@hotmail.com>
@@ -9,11 +8,12 @@ VM with the TensorFlow library from Google
 ## About
 
 This project provides a [Ubuntu (14.04)][10] [Vagrant][11] Virtual Machine (VM)
-with [TensorFlow][12] and [IPython][13] (now know as Jupyter) notebooks.
+with the [TensorFlow][12] library from Google and [IPython][13]
+(now know as Jupyter) notebooks.
 
 [10]: http://releases.ubuntu.com/14.04/
 [11]: http://www.vagrantup.com/
-[12]: https://github.com/tensorflow/tensorflow.git
+[12]: http://tensorflow.org/
 [13]: http://jupyter.org/
 
 ## 1. Start the VM
@@ -51,8 +51,6 @@ First run 1. Start the VM
     ```
     python first-tensorflow.py
     ```
-
-3. Open a browser to http://172.20.20.10:8500/ to view the web ui
 
 ## Requirements
 
