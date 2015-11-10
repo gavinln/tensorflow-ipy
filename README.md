@@ -16,6 +16,10 @@ with the [TensorFlow][12] library from Google and [IPython][13]
 [12]: http://tensorflow.org/
 [13]: http://jupyter.org/
 
+Follow the **Requirements** section below for a one-time setup of Virtualbox,
+Vagrant and Git before running the commands below. These instructions should
+work on Windows, Mac and Linux operating systems.
+
 ## 1. Start the VM
 
 1. Change to the tensorflow-ipy root directory
