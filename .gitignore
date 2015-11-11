@@ -3,3 +3,6 @@
 *.class
 *.swp
 .vagrant
+notebooks/.ipynb_checkpoints/
+notebooks/MNIST_data/
+
