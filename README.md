@@ -80,6 +80,28 @@ First run section 1.
 
 3. Open your browser to http://192.168.33.10:8888/ to view the notebooks
 
+## 4. Get the TensorFlow source code and examples
+
+First run section 1.
+
+1. Make the tensorflow directory if does not exist.
+
+    ```
+    mkdir /vagrant/tensorflow_source
+    ```
+
+2. Change to the tensorflow directory (will not be checked in to git)
+
+    ```
+    cd /vagrant/tensorflow_source
+    ```
+
+3. Clone the tensorflow repository
+
+    ```
+    git clone https://github.com/tensorflow/tensorflow
+    ```
+
 ## Requirements
 
 The following software is needed to get the software from github and run
