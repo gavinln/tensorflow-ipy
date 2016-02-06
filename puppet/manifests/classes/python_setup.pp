@@ -18,7 +18,7 @@ class python_setup {
                 ensure => installed,
                 provider => pip,
                 require => Package['python-dev'],
-                source => 'https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl'
+                source => 'https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl'
             }
             package { "python-zmq":
                 ensure => installed,
