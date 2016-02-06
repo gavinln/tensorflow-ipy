@@ -69,6 +69,7 @@ First run section 1.
 2. Run the IPython notebook server
 
     ```
+    chmod +x ipython-run.sh
     ./ipython-run.sh
     ```
 
