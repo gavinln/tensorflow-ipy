@@ -22,6 +22,9 @@ work on Windows, Mac and Linux operating systems.
 
 ## [Releases](./doc/releases.md)
 
+The list of releases of this project with a description of the main changes are
+included here.
+
 ## Running TensorFlow
 
 ### 1. Start the VM

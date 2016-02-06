@@ -1,6 +1,6 @@
 ## Releases
 
-### 2015-02-06
+### 2016-02-06
 
 Added instructions for running the Udacity TensorFlow examples.
 
