@@ -7,14 +7,14 @@
 
 ## About
 
-This project provides a [Ubuntu (14.04)][10] [Vagrant][11] Virtual Machine (VM)
-with the [TensorFlow][12] library from Google and [IPython][13]
+This project provides a [Ubuntu (14.04)][10] [Vagrant][20] Virtual Machine (VM)
+with the [TensorFlow][30] library from Google and [IPython][40]
 (now know as Jupyter) notebooks.
 
 [10]: http://releases.ubuntu.com/14.04/
-[11]: http://www.vagrantup.com/
-[12]: http://tensorflow.org/
-[13]: http://jupyter.org/
+[20]: http://www.vagrantup.com/
+[30]: http://tensorflow.org/
+[40]: http://jupyter.org/
 
 Follow the **Requirements** section below for a one-time setup of Virtualbox,
 Vagrant and Git before running the commands below. These instructions should
@@ -56,6 +56,11 @@ First run section 1.
     python first-tensorflow.py
     ```
 
+3. Make sure the version printed on the first line of the output is the version
+   you expect. The releases are documented on this [page][50]
+
+[50]: https://github.com/tensorflow/tensorflow/releases
+
 ## 3. Start the IPython (Jupyter) notebooks
 
 First run section 1.
@@ -80,11 +85,11 @@ First run section 1.
 The following software is needed to get the software from github and run
 Vagrant. The Git environment also provides an [SSH client][100] for Windows.
 
-* [Oracle VM VirtualBox][101]
-* [Vagrant][102]
-* [Git][103]
+* [Oracle VM VirtualBox][110]
+* [Vagrant][120]
+* [Git][130]
 
 [100]: http://en.wikipedia.org/wiki/Secure_Shell
-[101]: https://www.virtualbox.org/
-[102]: http://vagrantup.com/
-[103]: http://git-scm.com/
+[110]: https://www.virtualbox.org/
+[120]: http://vagrantup.com/
+[130]: http://git-scm.com/
