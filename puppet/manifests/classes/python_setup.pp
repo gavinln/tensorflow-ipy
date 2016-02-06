@@ -58,6 +58,11 @@ class python_setup {
                 provider => pip,
                 require => Package['libfreetype6-dev', 'pkg-config']
             }
+            package { 'legit':  # convenient git aliases
+                ensure => installed,
+                provider => pip,
+                require => Package['python-pip']
+            }
        }
     }
 }
