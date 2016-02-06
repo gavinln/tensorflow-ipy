@@ -20,7 +20,11 @@ Follow the **Requirements** section below for a one-time setup of Virtualbox,
 Vagrant and Git before running the commands below. These instructions should
 work on Windows, Mac and Linux operating systems.
 
-## 1. Start the VM
+## [Releases](./doc/releases.md)
+
+## Running TensorFlow
+
+### 1. Start the VM
 
 1. Change to the tensorflow-ipy root directory
 
@@ -40,7 +44,7 @@ work on Windows, Mac and Linux operating systems.
     vagrant ssh
     ```
 
-## 2. Run your first TensorFlow command line program
+### 2. Run your first TensorFlow command line program
 
 First run section 1.
 
@@ -61,7 +65,7 @@ First run section 1.
 
 [50]: https://github.com/tensorflow/tensorflow/releases
 
-## 3. Start the IPython (Jupyter) notebooks
+### 3. Start the IPython (Jupyter) notebooks
 
 First run section 1.
 
@@ -80,7 +84,7 @@ First run section 1.
 
 3. Open your browser to http://192.168.33.10:8888/ to view the notebooks
 
-## 4. Get the TensorFlow source code and examples
+### 4. Get the TensorFlow source code and examples
 
 First run section 1.
 
@@ -101,6 +105,29 @@ First run section 1.
     ```
     git clone https://github.com/tensorflow/tensorflow
     ```
+
+### 5. Run the [Udacity][60] [TensorFlow][70] examples
+
+First run section 1.
+
+1. Change to the notebooks directory
+
+    ```
+    cd /vagrant/scripts
+    ```
+
+2. Run the IPython notebook server with Udacity TensorFlow notebooks
+
+    ```
+    chmod +x ./ipy-udacity.sh
+    ./ipy-udacity.sh
+    ```
+
+3. Open your browser to http://192.168.33.10:8888/ to view the notebooks
+
+[60]: https://www.udacity.com/
+[70]: https://www.udacity.com/course/deep-learning--ud730
+
 
 ## Requirements
 

@@ -58,6 +58,14 @@ class python_setup {
                 provider => pip,
                 require => Package['libfreetype6-dev', 'pkg-config']
             }
+            package { 'python-scipy':
+                ensure => installed
+            }
+            package { 'sklearn':
+                ensure => installed,
+                provider => pip,
+                require => Package['python-pip']
+            }
             package { 'legit':  # convenient git aliases
                 ensure => installed,
                 provider => pip,
