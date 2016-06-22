@@ -3,7 +3,7 @@
 # Exit on any errors.
 set -e
 
-PUPPET_INSTALL='puppet module install --module_repository http://forge.puppetlabs.com'
+PUPPET_INSTALL='puppet module install '
 
 # install puppet modules
 (puppet module list | grep acme-ohmyzsh) ||
