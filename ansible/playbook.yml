@@ -16,6 +16,6 @@
   tasks:
     - include: init_setup.yml
     - include: cli_setup.yml
-#     - include: py3-setup.yml
-#     - include: py3-math-setup.yml
+    - include: py3-setup.yml
+    - include: py3-math-setup.yml
 #     - include: py3-parallel-setup.yml

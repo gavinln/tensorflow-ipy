@@ -60,7 +60,7 @@ First run section 1.
 2. Run the first program
 
     ```
-    python first-tensorflow.py
+    python3 first-tensorflow.py
     ```
 
 3. Make sure the version printed on the first line of the output is the version
