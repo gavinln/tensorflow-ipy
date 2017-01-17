@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  gather_facts: yes
+
+  vars_files:
+    - vars/main.yml
+
+  pre_tasks:
+    - name: Update apt cache if needed.
+      apt: update_cache=yes cache_valid_time=3600
+      become: yes
+
+  roles:
+    - geerlingguy.ntp
+
+  tasks:
+    - include: init_setup.yml
+    - include: cli_setup.yml
+#     - include: py3-setup.yml
+#     - include: py3-math-setup.yml
+#     - include: py3-parallel-setup.yml

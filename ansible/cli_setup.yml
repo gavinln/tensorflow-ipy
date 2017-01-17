@@ -1,0 +1,25 @@
+---
+- name: Install git
+  apt: name=git state=installed
+
+- name: Install tree
+  apt: name=tree state=installed
+
+- name: Install ag
+  apt: name=silversearcher-ag state=installed
+
+- name: Install jq
+  apt: name=jq state=installed
+
+- name: Install autojump
+  apt: name=autojump state=installed
+  register: autojump_status
+
+- name: Install vim
+  apt: name=vim state=installed
+
+- name: copy autojump profile
+  copy:
+    src=/usr/share/autojump/autojump.sh
+    dest=/etc/profile.d/autojump.sh
+  when: autojump_status.changed

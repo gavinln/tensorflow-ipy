@@ -1,0 +1,37 @@
+---
+- name: install pre-requisites for h5py
+  apt: name=libhdf5-dev state=installed
+
+- name: install h5py
+  pip: name=h5py state=present executable=pip3
+
+- name: install toolz
+  pip: name=toolz state=present executable=pip3
+
+- name: install cloudpickle
+  pip: name=cloudpickle state=present executable=pip3
+
+- name: install partd
+  pip: name=partd state=present executable=pip3
+
+- name: install dask
+  pip: name=dask state=present executable=pip3
+
+- name: install cython for feather
+  pip: name=cython state=present executable=pip3
+
+- name: install feather-format
+  pip: name=feather-format state=present executable=pip3
+
+- name: install distributed
+  pip: name=distributed state=present executable=pip3
+
+- name: install castra
+  pip: name=castra state=present executable=pip3
+
+- name: install graphviz
+  apt: name=graphviz state=present
+
+- name: install python graphviz
+  pip: name=graphviz state=present executable=pip3
+

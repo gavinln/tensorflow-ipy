@@ -1,0 +1,48 @@
+---
+- name: install numpy
+  pip: name=numpy state=present executable=pip3
+
+- name: install libopenblas-dev
+  apt: name=libopenblas-dev state=installed
+
+- name: install liblapack-dev
+  apt: name=liblapack-dev state=installed
+
+- name: install gfortran
+  apt: name=gfortran state=installed
+
+- name: install scipy
+  pip: name=scipy state=present executable=pip3
+
+- name: install theano
+  pip: name=theano state=present executable=pip3
+
+- name: install sklearn
+  pip: name=sklearn state=present executable=pip3
+
+- name: Install libfreetype6-dev for matplotlib
+  apt: pkg=libfreetype6-dev state=installed update_cache=true
+
+- name: Install pkg-config for matplotlib
+  apt: pkg=pkg-config state=installed update_cache=true
+
+- name: install matplotlib
+  pip: name=matplotlib state=present executable=pip3
+
+- name: install seaborn
+  pip: name=seaborn state=present executable=pip3
+
+- name: install pandas
+  pip: name=pandas state=present executable=pip3
+
+- name: install jupyter notebook
+  pip: name=notebook version=4.2.2 state=present executable=pip3
+
+- name: install watermark
+  pip: name=watermark state=present executable=pip3
+
+- name: Install libjpeg8-dev for pillow
+  apt: pkg=libjpeg8-dev state=installed
+
+- name: install Pillow
+  pip: name=pillow state=present executable=pip3

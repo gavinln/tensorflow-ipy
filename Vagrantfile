@@ -10,17 +10,15 @@ Vagrant.configure(2) do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
-  # do not update configured box
-  config.vm.box_check_update = false
-
-  # user insecure key
-  config.ssh.insert_key = false
-
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
 
-  config.ssh.forward_x11 = true
+  # do not update configured box
+  # config.vm.box_check_update = false
+
+  # user insecure key
+  # config.ssh.insert_key = false
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -50,15 +48,24 @@ Vagrant.configure(2) do |config|
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
-  #
-  config.vm.provider "virtualbox" do |vb|
-    # Display the VirtualBox GUI when booting the machine
-    #vb.gui = true
-  
-    # Customize the amount of memory on the VM:
-    vb.memory = "2048"
+
+  config.vm.define "tensorflow-ipy", autostart: true do |machine|
+    machine.vm.provider "virtualbox" do |vb|
+      # vb.gui = true
+      vb.memory = "4096"
+      vb.cpus = "2"
+    end
+
+    machine.vm.hostname = "tensorflow-ipy"
+    machine.vm.network "private_network", ip: "192.168.33.10"
+    # machine.vm.network "public_network"
+
+    machine.vm.provision "shell" do |sh|
+      sh.path = "ansible/ansible_install.sh"
+      sh.args = "ansible/playbook.yml"
+    end
   end
-  #
+
   # View the documentation for the provider you are using for more
   # information on available options.
 
@@ -76,15 +83,16 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
-  config.vm.provision "shell", path: 'puppet/install_puppet_modules.sh'
 
-  config.vm.hostname = "tensorflow-ipy"
-  config.vm.network "private_network", ip: "192.168.33.10"
+  # config.vm.provision "shell", path: 'puppet/install_puppet_modules.sh'
 
-  config.vm.provision "puppet" do |puppet|
-    puppet.manifest_file  = "default.pp"
-    puppet.manifests_path = "puppet/manifests"
-    puppet.options = "--certname=%s" % "tensorflow-ipy"
-    #puppet.options = "--verbose --debug"
-  end
+  # config.vm.hostname = "tensorflow-ipy"
+  # config.vm.network "private_network", ip: "192.168.33.10"
+
+  # config.vm.provision "puppet" do |puppet|
+  #   puppet.manifest_file  = "default.pp"
+  #   puppet.manifests_path = "puppet/manifests"
+  #   puppet.options = "--certname=%s" % "tensorflow-ipy"
+  #   #puppet.options = "--verbose --debug"
+  # end
 end

@@ -1,0 +1,10 @@
+---
+workspace: /root
+ntp_timezone: America/Los_Angeles
+
+fzf_repo: https://github.com/junegunn/fzf.git
+fzf_home: /home/vagrant/.fzf
+fzf_depth: 1
+fzf_version: 0.12.2
+
+rstudio_deb: rstudio-server-0.99.903-amd64.deb

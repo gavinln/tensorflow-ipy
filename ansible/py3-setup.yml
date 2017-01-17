@@ -1,0 +1,15 @@
+---
+- name: install gitric
+  pip: name=gitric state=present
+
+- name: install fabric
+  pip: name=fabric state=present
+
+- name: install pip3
+  apt: name=python3-pip state=installed
+
+- name: install httpie
+  pip: name=httpie state=present executable=pip3
+
+- name: install stormssh
+  pip: name=stormssh state=present executable=pip3

@@ -1,0 +1,18 @@
+---
+- name: upgrade system and packages
+  apt: upgrade=dist
+
+- name: install python dev
+  apt: name=python-dev state=installed
+
+- name: Install Pip
+  apt: name=python-pip state=installed
+
+- name: Install pyopenssl for InsecurePlatform warning
+  pip: name=pyopenssl state=present
+
+- name: Install ndg-httpsclient for InsecurePlatform warning
+  pip: name=ndg-httpsclient state=present
+
+- name: Install pyasn1 for InsecurePlatform warning
+  pip: name=pyasn1 state=present
