@@ -55,6 +55,12 @@ Vagrant.configure(2) do |config|
       # vb.gui = true
       vb.memory = "4096"
       vb.cpus = "2"
+
+      if Vagrant::Util::Platform.windows? then
+          # Fix for slow external network connections for Windows 10
+          vb.customize ['modifyvm', :id, '--natdnshostresolver1', 'on']
+          vb.customize ['modifyvm', :id, '--natdnsproxy1', 'on']
+      end
     end
 
     machine.vm.hostname = "tensorflow-ipy"
