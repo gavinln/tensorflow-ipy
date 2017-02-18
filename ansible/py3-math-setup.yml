@@ -39,7 +39,4 @@
   pip: name=notebook version=4.2.2 state=present executable=pip3
 
 - name: install Tensorflow
-  pip:
-    name: https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.1-cp35-cp35m-linux_x86_64.whl
-    state: present
-    executable: pip3
+  pip: name=tensorflow version=1.0.0 state=present executable=pip3
