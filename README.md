@@ -61,6 +61,8 @@ First run section 1.
 
     ```
     python3 first-tensorflow.py
+    # to disable warnings type
+    TF_CPP_MIN_LOG_LEVEL=2 python3 first-tensorflow.py
     ```
 
 3. Make sure the version printed on the first line of the output is the version
@@ -106,7 +108,7 @@ First run section 1.
 3. Clone the tensorflow repository
 
     ```
-    git clone https://github.com/tensorflow/tensorflow
+    git clone https://github.com/tensorflow/tensorflow.git
     ```
 
 ### 5. Run the [Udacity][60] [TensorFlow][70] examples
@@ -131,6 +133,9 @@ First run section 1.
 [60]: https://www.udacity.com/
 [70]: https://www.udacity.com/course/deep-learning--ud730
 
+## Tensorflow links
+
+* http://learningtensorflow.com/getting_started/
 
 ## Requirements
 
