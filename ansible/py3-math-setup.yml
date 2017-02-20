@@ -38,5 +38,8 @@
 - name: install jupyter notebook
   pip: name=notebook version=4.2.2 state=present executable=pip3
 
+- name: install jupyter notebook extensions
+  pip: name=jupyter_contrib_nbextensions state=present executable=pip3
+
 - name: install Tensorflow
   pip: name=tensorflow version=1.0.0 state=present executable=pip3

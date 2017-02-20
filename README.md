@@ -137,6 +137,21 @@ First run section 1.
 
 * http://learningtensorflow.com/getting_started/
 
+## Jupyter notebook extensions
+
+1. Install Jupyter notebook extensions
+
+    ```
+    jupyter contrib nbextension install --user
+    ```
+
+2. Install vim extension (optional)
+
+    ```
+    cd $(jupyter --data-dir)/nbextensions
+    git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
+    ```
+
 ## Requirements
 
 The following software is needed to get the software from github and run
