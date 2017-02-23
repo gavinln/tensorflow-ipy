@@ -133,6 +133,16 @@ First run section 1.
 [60]: https://www.udacity.com/
 [70]: https://www.udacity.com/course/deep-learning--ud730
 
+### 6. Using Tensorboard
+
+1. Run Tensorboard from the command line
+
+```
+tensorboard --logdir=/home/ubuntu/tensorflow-logs
+```
+
+2. Open a web browser to Tensorboard at http://192.168.33.10:6006/
+
 ## Tensorflow links
 
 * http://learningtensorflow.com/getting_started/
